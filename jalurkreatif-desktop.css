@@ -35,7 +35,7 @@
 		  width: 180px; /* Mengurangi lebar gambar */
 		  display: none;
 		  margin: 0px 130px 0px 0px; /* Menambahkan margin-right agar bersebelahan dengan container bar */
-		  transition: width 0.5s ease;
+
 		}
 
 		.profile img {
@@ -262,7 +262,7 @@
     .box-left12 {
       background-color: ;
 	  color: #272b3b;
-	  font-family: 'Gilroy SemiBold', 'montserrat', san-serif;
+	  font-family: 'DM Sans', 'montserrat', san-serif;
 	  padding-left: 1em;
     }
 	
@@ -375,7 +375,7 @@
 	width: 240px;
     max-width: 300px; /* Lebar maksimum produk */
     margin: 20px auto;
-    transition: transform 0.3s ease-in-out;
+    
     border: 1px solid #ccc;
     padding-top: 0;
     border-radius: 8px;
@@ -384,15 +384,6 @@
     font-family: "Helvetica Neue", "Helvetica", "arial", "Roboto";
 }
 
-/* Tambahkan gaya animasi zoom-out */
-.product.zoom-out {
-    transition: transform 0.3s ease-in-out;
-    transform: scale(0.9);
-}
-
-.product:hover {
-    transform: scale(1.1);
-}
 
 .product img {
     width: 100%; /* Ukuran gambar mengikuti lebar kontainer produk */
