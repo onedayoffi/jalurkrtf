@@ -1,8 +1,10 @@
 /* CSS Untuk Layar Handphone */
 @media screen and (max-width: 768px) {
     /* ---------------------------------------------------------------------- */
+
+	 
 	 body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       background-color: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -45,7 +47,7 @@
         }
 
         #menu a {
-			font-family: 'Gilroy SemiBold', sans-serif;
+			font-family: 'DM sans', sans-serif;
             display: block;
 			text-align: left;
             color: black;
@@ -57,7 +59,7 @@
 		header img {
 		  width: 180px; /* Mengurangi lebar gambar */
 		  display: block;
-		  margin: 0px 130px 0px 0px; /* Menambahkan margin-right agar bersebelahan dengan container bar */
+		  margin: 0px 60px 0px 0px; /* Menambahkan margin-right agar bersebelahan dengan container bar */
 		  transition: width 0.5s ease;
 		}
 
@@ -157,7 +159,7 @@
 	.article-list {
       list-style: none; /* Menghilangkan gaya bawaan dari unordered list */
       padding: 0;
-	  font-family: 'DM sans', san-serif;
+	  font-family: ;
 	  font-size: 14px;
 	  margin-left: 4px;
     }
@@ -169,6 +171,7 @@
 
     .article-list li::before {
 	  position: absolute;
+	  color:#c9162f;
       content: "\f35a"; /* Kode Unicode untuk ikon bintang pada Font Awesome */
       font-family: 'Font Awesome 6 Free'; /* Font Family Font Awesome */
 	  z-index: 0;
@@ -244,7 +247,7 @@
     .box-left12 {
       background-color: ;
 	  color: #272b3b;
-	  font-family: 'Gilroy SemiBold' serif;
+	  font-family: 'DM sans' san-serif;
 	  font-weight: 600;
 	  padding-left: 2em;
 	  padding-right: 2em;
@@ -252,12 +255,13 @@
     }
 	
 		.platform {
-			font-size: 2.4em;
+			font-family: 'DM sans' san-serif;
+			font-size:1.7em;
 			line-height: 1em;
 			margin-bottom: 0.8em;
 		}
 		.siapa {
-			font-size: 1.6em;
+			font-size: 1.4em;
 			line-height: 1em;
 			margin-bottom: 0.8em;
 			color: #bf0e27;
@@ -290,19 +294,19 @@
 /* ------------------------------------------------------------------------------------------------ */
 
 	.temukan {
-		font-family: 'helvetica', serif;
+
 		padding-top: 2em;
 		margin-left: 2em;
-		font-size: 12px;
+		font-size: 9px;
 		line-height: 1em;
-		color: #364b70;
+		color: grey;
 		display: block;
 	}
 /* ------------------------------------------------------------------------------------------------ */
 
 .filter-menu {
     display: flex;
-	margin-top: 18px;
+	margin-top: 9px;
     justify-content: center;
 	align-items: center;
     gap: 10px;
@@ -369,7 +373,7 @@
     margin-left: 2px;
     margin-right: 2px;
     margin-bottom: auto;
-    transition: transform 0.3s ease-in-out;
+   
     border: 1px solid #ccc;
     padding-top: 0;
     border-radius: 8px;
@@ -378,15 +382,6 @@
     font-family: "Helvetica Neue", "Helvetica", "arial", "Roboto";
 }
 
-/* Tambahkan gaya animasi zoom-out */
-.product.zoom-out {
-    transition: transform 0.3s ease-in-out;
-    transform: scale(0.9);
-}
-
-.product:hover {
-    transform: scale(1.1);
-}
 
 .product img {
     width: 100%; /* Ukuran gambar mengikuti lebar kontainer produk */
@@ -533,3 +528,4 @@
         transform: scale(1);
     }
 }
+
