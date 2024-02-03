@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta description="Platform Jasa Pembuatan Landing Page, Video Konten Produk Promosi, Video Iklan, Foto Produk"/>
 	    <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
 		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap">
@@ -13,16 +12,14 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="jalurkreatif-desktop.css"/>
 	<link rel="stylesheet" href="jalurkreatif-mobile.css"/>
+	<link rel="stylesheet" href="trafficlight.css"/>
+	<link rel="stylesheet" href="footer.css">
 
 	<link rel="icon" type="image/png" href="icon.png">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 	<style> 
-	 @font-face {
-  font-family: 'Gilroy SemiBold';
-  src: url('https://github.com/onedayoffi/beranda/blob/main/font/Gilroy-SemiBold.ttf') format('truetype');
-  /* tambahkan format lain jika diperlukan (e.g., woff, woff2) */
-}
+
 
 	</style>
 <script>
@@ -36,20 +33,30 @@
             });
         });
     </script>
-	<script>
-	window.onscroll = function() { scrollFunction() };
+		 <script>
+	window.onscroll = function() {
+  scrollFunction();
+};
 
-    function scrollFunction() {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        // Jika pengguna menggulir ke bawah lebih dari 50px, ubah ukuran gambar
-        document.querySelector("header img").style.width = "90px"; // Ubah ukuran gambar sesuai kebutuhan
-      } else {
-        // Jika pengguna menggulir ke atas, kembalikan ukuran gambar ke ukuran awal
-        document.querySelector("header img").style.width = "180px"; // Ukuran awal gambar
-      }
-	  }
+function scrollFunction() {
+  // Mengecek apakah lebar layar kurang dari atau sama dengan 768 piksel
+  if (window.innerWidth <= 768) {
+    // Jika ya, maka cek posisi scroll
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      // Jika pengguna menggulir ke bawah lebih dari 50px, ubah ukuran gambar
+      document.querySelector("header img").style.width = "90px";
+    } else {
+      // Jika pengguna menggulir ke atas, kembalikan ukuran gambar ke ukuran awal
+      document.querySelector("header img").style.width = "180px";
+    }
+  } else {
+    // Jika lebar layar lebih dari 768 piksel, kembalikan ukuran gambar ke ukuran awal
+    document.querySelector("header img").style.width = "180px";
+  }
+}
+
 	  </script>		
-    <title>Platform Penyedia Jasa Layanan Kreatif</title>
+    <title>Jalur Kreatif</title>
 </head>
 <body>
 
@@ -70,13 +77,18 @@
 				  <div class="bar3"></div>
 			</div>
 			<img src="logo.png" alt="Profile Picture">
+			 <div class="traffic-light-container">
+			  <div class="traffic-light" id="light1"></div>
+			  <div class="traffic-light" id="light2"></div>
+			  <div class="traffic-light" id="light3"></div>
+			</div>
 	</header>
 	
 		
 	
 	<div class="container-plat">
 		<div class="box12 box-left12">
-			<div class="platform">Platform Penyedia Jasa Layanan Kreatif, Sesuai Permintaan di Seluruh Indonesia</div>
+			<div class="platform">Platform Penyedia</br>Jasa Layanan Kreatif, Sesuai Permintaan di Seluruh Indonesia</div>
 			<div class="siapa saja">Siapa Saja bisa Kreatif, <br>Siapa saja bisa Profesional</div>
 			<div class="membantu">Membantu Para <span style="font-weight:600;">Konten Kreator, Pemilik Bisnis, Para Pengusaha UMKM,</span> Mengoptimalkan segala Pekerjaannya</div>
 			<div class="button-below-box-left">
@@ -95,11 +107,11 @@
 		<div class="box11 box-left">
 			<h2>Mengapa Anda Harus coba Pakai JalurKreatif</h2>
 				<ul class="article-list">
-				  <li><p style="font-size: 29px; line-height: 12px;">Ahli Kreatif<p>Kami bekerja dengan sejumlah ahli kreatif yang berpengalaman dan berbakat, siap untuk membawa ide-ide Anda menjadi kenyataan. Dari desain web hingga konten video yang menakjubkan, tim kami memiliki keahlian di berbagai bidang.</p></li>
-				  <li><p style="font-size: 29px; line-height: 12px;">Portofolio<p>Lihatlah portofolio kami yang kaya akan proyek-proyek yang telah sukses diselesaikan. Ini adalah bukti kompetensi kami dalam memberikan solusi kreatif yang unik dan sesuai dengan kebutuhan Anda.</p></li>
-				  <li><p style="font-size: 29px; line-height: 12px;">Free Konsultasi<p>Kami memahami bahwa proyek kreatif memerlukan kolaborasi yang efektif. Dengan platform kami, Anda dapat berkomunikasi secara langsung dengan para profesional kreatif kami untuk memastikan setiap detail sesuai dengan visi Anda.</p></li>
-				  <li><p style="font-size: 29px; line-height: 12px;">Pilihan Layanan<p>Dari pembuatan landing page yang menarik hingga video iklan produk yang Ciamik, kami menawarkan beragam layanan kreatif yang dapat disesuaikan dengan kebutuhan Anda. Tidak ada proyek terlalu kecil atau terlalu besar untuk kami tangani.</p></li>
-				  <li><p style="font-size: 29px; line-height: 12px;">Kepuasan Pelanggan<p>Ratusan pelanggan puas telah mengandalkan JalurKreatif untuk kebutuhan kreatif mereka. Ulasan positif mereka adalah bukti komitmen kami terhadap kualitas dan kepuasan pelanggan.</p></li>
+				  <li><p style="font-size: 23px; line-height: 9px;">Ahli Kreatif<p>Kami bekerja dengan sejumlah ahli kreatif yang berpengalaman dan berbakat, siap untuk membawa ide-ide Anda menjadi kenyataan. Dari desain web hingga konten video yang menakjubkan, tim kami memiliki keahlian di berbagai bidang.</p></li>
+				  <li><p style="font-size: 23px; line-height: 9px;">Portofolio<p>Lihatlah portofolio kami yang kaya akan proyek-proyek yang telah sukses diselesaikan. Ini adalah bukti kompetensi kami dalam memberikan solusi kreatif yang unik dan sesuai dengan kebutuhan Anda.</p></li>
+				  <li><p style="font-size: 23px; line-height: 9px;">Free Konsultasi<p>Kami memahami bahwa proyek kreatif memerlukan kolaborasi yang efektif. Dengan platform kami, Anda dapat berkomunikasi secara langsung dengan para profesional kreatif kami untuk memastikan setiap detail sesuai dengan visi Anda.</p></li>
+				  <li><p style="font-size: 23px; line-height: 9px;">Pilihan Layanan<p>Dari pembuatan landing page yang menarik hingga video iklan produk yang Ciamik, kami menawarkan beragam layanan kreatif yang dapat disesuaikan dengan kebutuhan Anda. Tidak ada proyek terlalu kecil atau terlalu besar untuk kami tangani.</p></li>
+				  <li><p style="font-size: 23px; line-height: 9px;">Kepuasan Pelanggan<p>Ratusan pelanggan puas telah mengandalkan JalurKreatif untuk kebutuhan kreatif mereka. Ulasan positif mereka adalah bukti komitmen kami terhadap kualitas dan kepuasan pelanggan.</p></li>
 				</ul>		
 		</div>
 		
@@ -251,6 +263,46 @@
 	 <div class="content" id="galleryContent">
         <!-- Image gallery goes here -->
     </div>
+	
+	 <footer class="footer">
+	<div class="columns">
+		<div class="column-menu">
+		  <h3>JalurKreatif</h3>
+		  <ul>
+			<li>Home</li>
+			<li>Layanan Kami</li>
+			<li>Testimoni</li>
+			<li>Kontak Kami</li>
+		  </ul>
+		</div>
+
+		<div class="column-location">
+		  <h3>Locationg</h3>
+		  <p>Permata Wanasari Blok H4, Cibitung - Bekasi, Jawa Barat</p>
+		  <p>+62 857 1778 8015</p>
+		</div>
+
+		<div class="column-service">
+		  <h3>Services</h3>
+		  <ul>
+			<li>Sosial Media Management</li>
+			<li>Landingpage Desain & Related Konten</li>
+			<li>Marketplace Desain & Related Konten</li>
+			<li>Video Production</li>
+		  </ul>
+		</div>
+
+		<div class="column-metode">
+		  <h3>Metode Pembayaran</h3>
+		  <div class="image-container">
+			<img src="https://www.zeinproduction.com/images/bca.png" alt="Gambar 1">
+			<img src="https://www.zeinproduction.com/images/ovo.png" alt="Gambar 2">
+			<img src="https://www.zeinproduction.com/images/ovo.png" alt="Gambar 3">
+			<img src="https://www.zeinproduction.com/images/dana.png" alt="Gambar 4">
+		  </div>
+		</div>
+	</div>
+  </footer>
  <script>
         document.addEventListener('DOMContentLoaded', function () {
             showProducts();
