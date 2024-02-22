@@ -1,0 +1,522 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chat Box</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI/tZ2L5CBEIoA4+7nGw3yQ9M2a7l0LgHfZz9L/E=" crossorigin="anonymous"></script>
+    <style>
+        body, html {
+            font-family: Arial, helveltica,sans-serif;
+            margin: 0;
+            padding: 0;
+			height: 100%;
+			margin: 0;
+			background: #7F7FD5;
+	        background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+	        background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+        }
+
+        .chat-container {
+            width: 100%;
+			max-width: 385px;
+            margin: auto;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-header {
+            background-color: rgba(0,0,0,0.5) !important;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .icon-left {
+            margin-right: 10px;
+        }
+
+		.profile-icon-atas {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+        .profile-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+         .profile-icon1 {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+		.profile-icon-atas img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .profile-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .profile-icon1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+
+    
+            .icon-right {
+			float: left;
+            margin-left: 150px;
+            margin-top: ;
+        }
+    
+    	
+        .chat-body {
+        background-color: rgba(0,0,0,0.4) !important;
+            padding: 15px;
+            overflow-y: scroll;
+            height: 300px;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .message .profile-icon {
+            margin-right: 10px;
+        }
+                .message .profile-icon1 {
+            margin-right: 5px;
+            margin-left: 10px;
+        }
+        
+                .additional-text {
+            font-size: 12px;
+            color: #e8e8e8;
+        }
+        
+                /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: zoomInOut 0.3s ease-in-out;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(1);
+            transform-origin: left top;
+        }
+        
+         @keyframes zoomInOut {
+    from {
+        transform: scale(0);
+        transform-origin: left top; /* Pusat zoom di sebelah kiri atas */
+    }
+    to {
+        transform: scale(1);
+        transform-origin: center; /* Pusat zoom di tengah */
+    }
+}
+
+	#action_menu_btn{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		color: white;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	.action_menu{
+		z-index: 1;
+		position: absolute;
+		padding: 15px 0;
+		background-color: rgba(0,0,0,0.5);
+		color: white;
+		border-radius: 10px;
+		top: 20px;
+		right: 10px;
+		display: none;
+        font-size: 12px;
+        width: 150px;
+        line-height: 20px;
+	}
+	.action_menu ul{
+		list-style: none;
+		padding: 0;
+	margin: 0;
+	}
+	.action_menu ul li{
+		width: 100%;
+		padding: 5px 15px;
+		margin-bottom: 0px;
+	}
+	.action_menu ul li i{
+		padding-right: 6px;
+	
+	}
+	.action_menu ul li:hover{
+		cursor: pointer;
+		background-color: rgba(0,0,0,0.2);
+	}
+
+        .message .message-content1 {
+            background-color: #78e08f;
+			border-top-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+            padding: 10px;
+            max-width: 70%;
+            position: relative;
+        }
+        .message .message-content {
+            background-color: #82ccdd;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+            padding: 10px;
+            max-width: 70%;
+            position: relative;
+        }
+
+        .message .message-content .time {
+            position: absolute;
+            bottom: -15px;
+            left: 0px;
+            right: 0;
+            font-size: 10px;
+            color: color: rgba(255,255,255,0.5);
+        }
+        .message .message-content1 .time {
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            font-size: 10px;
+            color: color: rgba(255,255,255,0.5);
+        }
+
+        .message .time {
+            margin-left: 5px;
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .user-message {
+            justify-content: flex-end;
+        }
+
+        .textarea-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.5) !important;
+        }
+
+        .textarea-container textarea {
+            flex-grow: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 40px;
+            resize: none;
+            line-height: 10px;
+        }
+
+        .send-icon {
+            margin-left: 10px;
+            cursor: pointer;
+            background: #4ca861;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .typing-indicator {
+            font-style: italic;
+            color: white;
+            font-size: 10px;
+            padding-left: 1px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-header">
+			<div class="icon-left" id="resetIcon">
+			<!-- Font Awesome Arrow Left -->
+				<i class='fas fa-arrow-left' style='font-size:24px'></i>
+			</div>
+						<div class="profile-icon-atas" id="profileImageModalBtn">
+						<img src="https://jnewsonline.com/wp-content/uploads/2023/11/AI-1.png" alt="Profile Image">
+						</div>
+						<div>
+         <div class="modal" id="profileImageModal">
+        <div class="modal-content" id="profileImageContainer">
+            <img src="https://jnewsonline.com/wp-content/uploads/2023/11/AI-1.png" alt="Profile Image">
+        </div>
+		</div>
+							<span>dulovecakes</span>
+							<div class="additional-text">Dilihat hari ini</div>
+							<div class="typing-indicator" id="typingIndicator"></div>
+        </div>
+		<div class="icon-right" id="resetIcon">
+			<!-- Font Awesome Arrow Left -->
+				<i class="fas fa-ellipsis-v" style='font-size:24px'></i></span>
+			</div>
+											
+	</div>
+
+
+    <div class="chat-body">
+        <div class="message user-message">
+            <div class="message-content1">
+                Boleh kak, untuk tanggal berapa?
+                <div class="time">12:01 PM</div>
+            </div>
+            <div class="profile-icon1">
+                <img src="https://cdn.idntimes.com/content-images/post/20230515/gambar-profil-wa-keren-41d3732660868cf4a36d801d1301f672.jpg" alt="Profile Image1">
+            </div>
+            </div>
+            <div class="message">
+        <div class="profile-icon">
+                <img src="https://i.ytimg.com/vi/9JuD4lqyTk4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4Ac4FgAKACooCDAgAEAEYZSBgKDswDw==&rs=AOn4CLDUcGeiBnMSs7zLX8efvSIsiUn8Tg" alt="Profile Image">
+            </div>
+            <div class="message-content">
+                Hi, saya mau pesan kue
+                <div class="time">12:05 PM</div>
+            </div>
+        </div>
+
+        <!-- You can add more messages here -->
+
+    </div>
+
+    <div class="textarea-container">
+        <textarea id="userInput" placeholder="ketikan sesuatu..."></textarea>
+        <div class="send-icon" onclick="sendMessage()">
+            <i class="material-icons" style="color:white;">send</i>
+        </div>
+    </div>
+</div>
+
+<script>
+function openProfileImageModal() {
+        var modal = document.getElementById('profileImageModal');
+        var modalContent = document.getElementById('profileImageContainer');
+        modal.style.display = 'flex';
+
+        // Animasi zoom-in dari titik awal menuju ke tengah
+        modalContent.style.transform = 'scale(0)';
+        modalContent.style.transformOrigin = 'center';
+        setTimeout(function () {
+            modalContent.style.transform = 'scale(1)';
+        }, 100);
+    }
+
+    // Menutup modal ketika diklik di luar gambar
+    document.getElementById('profileImageModal').addEventListener('click', function () {
+        var modal = document.getElementById('profileImageModal');
+        modal.style.display = 'none';
+    });
+
+    // ... (kode lainnya tetap sama) ...
+
+    // Menambahkan event listener untuk membuka modal gambar saat di klik
+    document.getElementById('profileImageModalBtn').addEventListener('click', openProfileImageModal);
+    function sendMessage() {
+        var userInput = document.getElementById('userInput').value;
+        var chatBody = document.querySelector('.chat-body');
+		
+		 // Check user input for specific keywords and generate responses
+		 if (isMessageInappropriate(userInput)) {
+        userInput = "Pesan Anda dihapus karena mengandung kata yang tidak pantas.";
+    }
+
+        // Create user message
+        var userMessage = document.createElement('div');
+        userMessage.className = 'message user-message';
+
+        var messageContent = document.createElement('div');
+        messageContent.className = 'message-content1';
+        messageContent.textContent = userInput;
+
+        var time = document.createElement('div');
+        time.className = 'time';
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        time.textContent = hours + ':' + (minutes < 10 ? '0' : '') + minutes;
+
+        var profileIcon = document.createElement('div');
+        profileIcon.className = 'profile-icon1';
+        profileIcon.innerHTML = '<img src="https://cdn.idntimes.com/content-images/post/20230515/gambar-profil-wa-keren-41d3732660868cf4a36d801d1301f672.jpg" alt="Profile Image">';
+
+        userMessage.appendChild(messageContent);
+        userMessage.appendChild(profileIcon);
+        userMessage.appendChild(time);
+
+        chatBody.appendChild(userMessage);
+
+        // Show typing indicator
+        document.getElementById('typingIndicator').textContent = 'Sedang mengetik...';
+
+        // Handle responses based on user input with a delay of 2 seconds
+        setTimeout(function () {
+            handleResponses(userInput);
+            // Hide typing indicator after the response is generated
+            document.getElementById('typingIndicator').textContent = '';
+        }, 2000);
+
+        // Clear the input field
+        document.getElementById('userInput').value = '';
+    }
+	
+	 
+
+function isMessageInappropriate(message) {
+    // Daftar kata-kata yang tidak pantas
+    var inappropriateWords = ["ngewe", "ngentot", "kontol", "bangsat", "memek", "hencet"];
+
+    // Mengonversi pesan menjadi huruf kecil untuk memastikan pencocokan tidak bersifat case-sensitive
+    var lowercaseMessage = message.toLowerCase();
+
+    // Memeriksa apakah pesan mengandung kata-kata tidak pantas
+    for (var i = 0; i < inappropriateWords.length; i++) {
+        if (lowercaseMessage.includes(inappropriateWords[i])) {
+            return true;
+        }
+    }
+	
+	
+
+    return false;
+}
+
+
+
+
+
+    function handleResponses(userInput) {
+        var chatBody = document.querySelector('.chat-body');
+
+        // Create response message
+        var responseMessage = document.createElement('div');
+        responseMessage.className = 'message';
+
+        var messageContent = document.createElement('div');
+        messageContent.className = 'message-content';
+        
+        var profileIcon = document.createElement('div');
+        profileIcon.className = 'profile-icon';
+        profileIcon.innerHTML = '<img src="https://i.ytimg.com/vi/9JuD4lqyTk4/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4Ac4FgAKACooCDAgAEAEYZSBgKDswDw==&rs=AOn4CLDUcGeiBnMSs7zLX8efvSIsiUn8Tg" alt="Profile Image">';
+
+
+
+        var time = document.createElement('div');
+        time.className = 'time';
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        time.textContent = hours + ':' + (minutes < 10 ? '0' : '') + minutes;
+
+       
+        if (userInput.toLowerCase().includes('alamat')) {
+            messageContent.textContent = 'Alamat kami di perumahan permata';
+        } else if (userInput.toLowerCase().includes('harga') || userInput.toLowerCase().includes('berapa')) {
+            messageContent.textContent = 'Untuk price list nya silakan klik ada di menu yah kak';
+        } else {
+            // Default response
+            messageContent.textContent = '';
+        }
+		
+		
+
+responseMessage.appendChild(profileIcon);
+responseMessage.appendChild(messageContent)
+responseMessage.appendChild(time);  // Memindahkan ini ke bawah messageContent
+
+chatBody.appendChild(responseMessage);
+
+        // Scroll to the bottom of the chat body
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+	
+	
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        $('#action_menu_btn').click(function(e) {
+            e.stopPropagation(); // Mencegah penyebaran ke event klik dokumen
+            $('.action_menu').toggle();
+        });
+
+        // Menutup action menu saat dokumen diklik di luar area action menu
+        $(document).click(function() {
+            $('.action_menu').hide();
+        });
+
+        // Mencegah penutupan action menu saat diklik di dalamnya
+        $('.action_menu').click(function(e) {
+            e.stopPropagation();
+        });
+    });
+</script>
+
+
+<script>
+    document.getElementById('resetIcon').addEventListener('click', function() {
+        // Gantilah URL dengan URL halaman awal atau sesuai kebutuhan
+        window.location.href = '';
+    });
+</script>
+
+</body>
+</html>
