@@ -1,0 +1,289 @@
+
+	body {
+		font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, Verdana, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #152c4a;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100vh;
+	}
+
+
+@keyframes shineEffect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+header {
+	display: flex;
+  background-color: white;
+  color: #fff;
+  padding: 1em;
+  padding-left: 5em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid #d6d6d6;
+}
+
+header img {
+	 float: left;
+            width: 200px;
+            display: block;
+            animation: shineEffect 5s linear infinite;
+            background: linear-gradient(to right, transparent 60%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0.5) 100%);
+            background-size: 200% 100%;
+}
+
+ nav-header {
+			 display: flex;
+            margin-left: 600px;
+			margin-right: auto;
+            float: right;
+            overflow: hidden;
+        }
+
+        nav-header a {
+            display: block;
+			font-size: 0.9em;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.4s;
+			
+        }
+
+        nav-header a:hover {
+            color: #152c4a;
+			border: 2px solid #152c4a;
+			border-radius: 8px;
+			margin-bottom: 5px;
+        }
+		
+		.Layanan {
+			margin-top: 4em;
+			margin-left: 4em;
+			font-family: 'DM sans', 'Helvetica', san-serif;
+			font-weight: 500;
+			font-size: 1.7em;
+
+			color: #ffcc00;
+		}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 200px;
+    padding-top: 100px;
+}
+
+.text-container1 {
+    width: 40%; /* Mengurangi lebar teks */
+    background-color: ; /* Menambahkan warna latar belakang */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-container1 .j {
+    font-size: 60px;
+    font-family: 'DM Sans', 'poppins', sans-serif;
+    font-weight: 700;
+	letter-spacing: -3px;
+}
+
+.text-container1 p {
+    margin: 18px 0; /* Memberikan margin atas dan bawah pada setiap paragraf */
+	font-family: 'DM Sans', 'montserrat', san-serif;
+	font-size: 1.4em;
+
+}
+
+.text-container1 p:nth-child(3) {
+    color: #ffcc00;
+}
+
+.image-container1 {
+    width: 40%; /* Menambah lebar kontainer gambar */
+	margin-top: 18px;	
+	padding-top: 30px;
+
+}
+
+.image-container1 img {
+    width: 100%; /* Mengisi lebar kontainer gambar */
+    height: auto;
+    display: block;
+	margin-left: -140px;
+	
+}
+		
+/* ------------------------------------------------------------------------------------------------ */
+.btn-keren {
+            display: inline-block;
+			margin-left: 13.6em;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #007bff; /* Warna latar belakang */
+            color: #fff; /* Warna teks */
+            border: 2px solid #007bff; /* Warna border */
+            border-radius: 5px; /* Sudut border */
+            transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Animasi perubahan warna */
+        }
+
+        .btn-keren:hover {
+            background-color: #0056b3; /* Warna latar belakang saat hover */
+            color: #fff; /* Warna teks saat hover */
+			transform: scale(1.05);
+        }
+
+/* ------------------------------------------------------------------------------------------------ */
+
+
+.container {
+  display: flex;
+}
+
+nav.nav-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: #243c5c;
+  padding: 20px;
+  width: 300px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  margin: 5px 0;
+  padding: 1em;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: border 0.3s ease, color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+  align-self: flex-start;
+  width: 100%;
+  transform-origin: left center;
+}
+
+nav a:hover {
+  border: 0px solid #ffcc00;
+  color: #0a5730;
+  background-color: #ffcc00;
+  transform: scale(1.05) translateX(3px);
+}
+
+.katapembuka {
+  width: 1030px;
+  height: 100%;
+  background-color: #f0f0f0;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-left: 4%;
+  margin-top: 2%;
+}
+
+.katapembuka p {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', 'Poppins', 'Helvetica Neue', Helvetica, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  font-size: 1.6em;
+  color: black;
+}
+
+section {
+  padding: 2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.kelas {
+  background-color: white;
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.master-class {
+  font-weight: bold;
+  color: #333;
+  font-size: 2em;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'avenir-lt-w01_35-light1475496', 'avenir-lt-w05_35-light', sans-serif;
+}
+
+.kelas1 {
+  text-align: center;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 20% 0% 20%;
+}
+
+.kelas1 a {
+  display: block;
+  margin: 10px 0;
+  background-color: white;
+  color: #000;
+  border: 3px solid #333;
+  body {
+    font-family: 'AvenirRegular', sans-serif;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.kelas1 a:hover {
+  background-color: #ffcc00;
+  color: #000;
+  transform-origin: center center;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+   font-family: 'DM Sans', 'poppins', sans-serif;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+   font-family: 'DM Sans', 'poppins', sans-serif;
+}
