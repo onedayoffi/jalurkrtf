@@ -1,431 +1,431 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
-		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;600;700;800;900&display=swap">
-	 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700;800;900&display=swap">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:ital,wght@0,400;0,600;1,400;1,600&family=Helvetica:wght@400;600&family=Verdana:wght@400;600&family=Montserrat:wght@400;800&family=Segoe+UI:wght@400;600&display=swap">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="jalurkreatif-desktop.css"/>
-	<link rel="stylesheet" href="jalurkreatif-mobile.css"/>
-	<link rel="stylesheet" href="trafficlight.css"/>
-	<link rel="stylesheet" href="footer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700;800;900&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:ital,wght@0,400;0,600;1,400;1,600&family=Helvetica:wght@400;600&family=Verdana:wght@400;600&family=Montserrat:wght@400;800&family=Segoe+UI:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jalurkreatif-desktop.css" />
+  <link rel="stylesheet" href="css/jalurkreatif-mobile.css" />
+  <link rel="stylesheet" href="css/trafficlight.css" />
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/accordion.css">
 
-	<link rel="icon" type="image/png" href="icon.png">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="icon" type="image/png" href="asset/icon.png">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-	<style> 
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700;800&display=swap');
+
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menu = document.getElementById('menu');
+      const garis = document.getElementById('garis');
+
+      garis.addEventListener('click', function () {
+        const isMenuVisible = menu.style.left === '0px';
+        menu.style.left = isMenuVisible ? '-110%' : '0px';
+        myFunction(garis);
+      });
+
+      // Menutup menu ketika dokumen diklik di luar area menu atau icon menu
+      document.addEventListener('click', function (event) {
+        const isClickedOutsideMenu = !menu.contains(event.target) && !garis.contains(event.target);
+        if (isClickedOutsideMenu) {
+          menu.style.left = '-110%';
+          garis.classList.remove("change");
+        }
+      });
+
+      // Tambahkan fungsi untuk mengubah ikon menu
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    });
+  </script>
 
 
-	</style>
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menu = document.getElementById('menu');
-            const garis = document.getElementById('garis');
 
-            garis.addEventListener('click', function() {
-                const isMenuVisible = menu.style.left === '0px';
-                menu.style.left = isMenuVisible ? '-110%' : '0px';
-            });
-        });
-    </script>
-		 <script>
-	window.onscroll = function() {
-  scrollFunction();
-};
 
-function scrollFunction() {
-  // Mengecek apakah lebar layar kurang dari atau sama dengan 768 piksel
-  if (window.innerWidth <= 768) {
-    // Jika ya, maka cek posisi scroll
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      // Jika pengguna menggulir ke bawah lebih dari 50px, ubah ukuran gambar
-      document.querySelector("header img").style.width = "90px";
-    } else {
-      // Jika pengguna menggulir ke atas, kembalikan ukuran gambar ke ukuran awal
-      document.querySelector("header img").style.width = "180px";
-    }
-  } else {
-    // Jika lebar layar lebih dari 768 piksel, kembalikan ukuran gambar ke ukuran awal
-    document.querySelector("header img").style.width = "180px";
-  }
-}
-
-	  </script>		
-    <title>Jalur Kreatif</title>
+  <title>Jalur Creative - Penyedia
+    Jasa Layanan Kreatif, Sesuai Permintaan di Seluruh Indonesia</title>
 </head>
+
 <body>
 
-	<header>
-			  <div class="profile">
-				<img src="logo.png" alt="Profile Picture">
-			  </div>
-			  
-			  <nav-header id="menu">
-				<a href="#layanan">Layanan</a>
-				<a href="#master-kelas">Master Kelas</a>
-				<a href="#blog">Blog</a>
-				<a href="#kontak">Kontak</a>
-			  </nav-header>
-			<div id="garis" onclick="myFunction(this)">
+  <header>
+    <div class="profile">
+      <img src="asset/logo kuning-putih.png" alt="">
+    </div>
+
+    <nav-header id="menu">
+      <a href="#layanan">Layanan</a>
+      <a href="#master-kelas">Master Kelas</a>
+      <a href="#blog">Blog</a>
+      <a href="#kontak">Kontak</a>
+    </nav-header>
+    <div id="garis" onclick="myFunction(this)">
 				  <div class="bar1"></div>
 				  <div class="bar2"></div>
 				  <div class="bar3"></div>
-			</div>
-			<img src="logo.png" alt="Profile Picture">
-			 <div class="traffic-light-container">
-			  <div class="traffic-light" id="light1"></div>
-			  <div class="traffic-light" id="light2"></div>
-			  <div class="traffic-light" id="light3"></div>
-			</div>
-	</header>
-	
-		
-	
-	<div class="container-plat">
-		<div class="box12 box-left12">
-			<div class="platform">Platform Penyedia</br>Jasa Layanan Kreatif, Sesuai Permintaan di Seluruh Indonesia</div>
-			<div class="siapa saja">Siapa Saja bisa Kreatif, <br>Siapa saja bisa Profesional</div>
-			<div class="membantu">Membantu Para <span style="font-weight:600;">Konten Kreator, Pemilik Bisnis, Para Pengusaha UMKM,</span> Mengoptimalkan segala Pekerjaannya</div>
-			<div class="button-below-box-left">
-			<div class="button"><a href="#" class="btn-keren">Konsultasi Langsung&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a></div>
-		</div>
-    </div>
-	
-		<div class="box12 box-right12">
-			<img src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/c_scale,w_580,h_395,f_auto,q_auto,dpr_2.0/brontes/hero/searching-talent@1x.png" alt="Gambar" />
-		</div>
-	</div>
-	
-		
-	
-	<div class="container-meng">
-		<div class="box11 box-left">
-			<h2>Mengapa Anda Harus coba Pakai JalurKreatif</h2>
-				<ul class="article-list">
-				  <li><p style="font-size: 23px; line-height: 9px;">Ahli Kreatif<p>Kami bekerja dengan sejumlah ahli kreatif yang berpengalaman dan berbakat, siap untuk membawa ide-ide Anda menjadi kenyataan. Dari desain web hingga konten video yang menakjubkan, tim kami memiliki keahlian di berbagai bidang.</p></li>
-				  <li><p style="font-size: 23px; line-height: 9px;">Portofolio<p>Lihatlah portofolio kami yang kaya akan proyek-proyek yang telah sukses diselesaikan. Ini adalah bukti kompetensi kami dalam memberikan solusi kreatif yang unik dan sesuai dengan kebutuhan Anda.</p></li>
-				  <li><p style="font-size: 23px; line-height: 9px;">Free Konsultasi<p>Kami memahami bahwa proyek kreatif memerlukan kolaborasi yang efektif. Dengan platform kami, Anda dapat berkomunikasi secara langsung dengan para profesional kreatif kami untuk memastikan setiap detail sesuai dengan visi Anda.</p></li>
-				  <li><p style="font-size: 23px; line-height: 9px;">Pilihan Layanan<p>Dari pembuatan landing page yang menarik hingga video iklan produk yang Ciamik, kami menawarkan beragam layanan kreatif yang dapat disesuaikan dengan kebutuhan Anda. Tidak ada proyek terlalu kecil atau terlalu besar untuk kami tangani.</p></li>
-				  <li><p style="font-size: 23px; line-height: 9px;">Kepuasan Pelanggan<p>Ratusan pelanggan puas telah mengandalkan JalurKreatif untuk kebutuhan kreatif mereka. Ulasan positif mereka adalah bukti komitmen kami terhadap kualitas dan kepuasan pelanggan.</p></li>
-				</ul>		
-		</div>
-		
-		<div class="box-punya box-right">
-			<img src="komplek.png" alt="pemikiran"/>
-			<div class="punya">Punya Gambaran Ide Bagus? Biar Kami yang Melakukan Tugas Pengerjaannya.</div>
-			<img src="strategi.png" alt="kuda catur"/>
-			<div class="tidak">Tidak yakin Harus mulai dari mana, Seperti Apa? Konsultasi Langsung sama Ahli,<br>kami Berusaha memahami apa yang anda Maksud.</div>
-			<div class="star-rating">
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star"></i>
-				<i class="fas fa-star-half-alt"></i> <!-- Setengah bintang untuk nilai 4.9 -->
-				<span class="rating-text">4.9</span>
-				<div class="penilaian">Penilaian Klien pada JalurKreatif</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="temukan">Pilih Layanan yang anda Butuhkan</div>
-	
-	
-	
-	<!------------------------------------------------------------------------------------->
-	
-        <div class="filter-menu">
-			<i class="fas fa-shopping-cart active" onclick="showProducts()" id="productsIcon"></i>
-				<span onclick="showProducts()">Jasa Layanan</span>
-
-			<i class="fas fa-th-large active" onclick="showVideos()" id="videosIcon"></i>
-				<span onclick="showVideos()">Videos</span>
-
-			<i class="fas fa-dollar-sign active" onclick="showGallery()" id="galleryIcon"></i>
-				<span onclick="showGallery()">Gallery</span>
 		</div>
 
-	<!------------------------------------------------------------------------------------->
-	
-	<div class="content" id="productContent">
-		<div id="produk-section">
-			<div class="product" onclick="goToProductPage('product-page1.html')">
-            <img src="https://toffeedev.com/wp-content/uploads/2021/08/cara-membuat-landing-page.png" alt="Product 1">
-            <div class="product-name">Pembuatan Landing Page</div>
-            <div class="product-price">Rp. 100.000</div>
-			<div class="terjual"> <i class="fas fa-star star-icon"></i>&nbsp;5.0 | 6 terjual</div>
-        </div>
+    <img src="asset/logo kuning-putih.png" alt="">
+    <div class="traffic-light-container">
+      <div class="traffic-light" id="light1"></div>
+      <div class="traffic-light" id="light2"></div>
+      <div class="traffic-light" id="light3"></div>
+    </div>
 
-        <div class="product" onclick="goToProductPage('product-page2.html')">
-            <img src="https://images.ctfassets.net/00i767ygo3tc/3GZS2UPQlrfnQmeMp78MSi/541c3a8854d6883b5fe8b8128edddcde/2022-1_SEO-Blog-Post-Images_Q1_11-15_how-to-make-a-youtube-intro.png" alt="Product 2">
-            <div class="product-name">Video Intro Youtube</div>
-            <div class="product-price">Rp. 200.000</div>
-			<div class="terjual"> <i class="fas fa-star star-icon"></i>&nbsp;4.9 | 19 terjual</div>
-        </div>
+  </header>
 
-        <div class="product" onclick="goToProductPage('product-page3.html')">
-            <img src="https://p16-capcut-va.ibyteimg.com/tos-maliva-i-6rr7idwo9f-us/997ec5c5831344ccb142a1b742ffcb75~tplv-6rr7idwo9f-image.image" alt="Product 3">
-            <div class="product-name">Konten Video Produk Promosi</div>
-            <div class="product-price">Rp. 300.000</div>
-			<div class="terjual"> <i class="fas fa-star star-icon"></i>&nbsp;5.0 | 4 terjual</div>
-        </div>
 
-        <div class="product" onclick="goToProductPage('product-page4.html')">
-            <img src="https://s1.bukalapak.com/bukalapak-kontenz-production/content_attachments/79246/w-960/1631257719.jpeg" alt="Product 4">
-            <div class="product-name">Foto Produk</div>
-            <div class="product-price">Rp. 400.000</div>
-			<div class="terjual"> <i class="fas fa-star star-icon"></i>&nbsp;5.0 | 3 terjual</div>
+<div class="animasi">
+  <div class="bulat"></div>
+</div>
+<div class="animasi1">
+  <div class="bulat1"></div>
+</div>
+
+<main>
+  <div class="container-plat">
+    <div class="box12 box-left12">
+      <div class="platform scroll-animation">Platform Penyedia</br>Jasa Layanan Kreatif, Sesuai Permintaan di Seluruh Indonesia</div>
+      <div class="siapa scroll-animation">Siapa Saja bisa Kreatif, <br>Siapa saja bisa Profesional</div>
+      <div class="membantu">Membantu Para <span style="font-weight:600;">Konten Kreator, Pemilik Bisnis, Para Pengusaha
+          UMKM,</span> Mengoptimalkan segala Pekerjaannya</div>
+      <div class="button-below-box-left">
+        <div class="button"><a href="https://wa.me/685717788015?text=Hai%20kak%2C%20saya%20mau%20bertanya%3F" class="btn-keren">Konsultasi Langsung&nbsp;&nbsp;<i
+              class="fas fa-arrow-right"></i></a></div>
+      </div>
+    </div>
+
+    <div class="box12 box-right12 scroll-animation">
+      <img src="asset/banner depan.png" alt="Jasa Pembuatan Landing Page, Intro Youtube, Desain CV, Undangan Digital" />
+  </div>
+  
+  </div>
+
+
+
+  <div class="container-meng">
+    <div class="box11 box-left">
+      <h2 class="scroll-animation">Mengapa Anda Harus Gunakan JalurCreative</h2>
+      <div class="accordion">
+
+        <div class="accordion__item">
+          <div class="accordion__item__header">
+            Ahli Kreatif
+          </div>
+    
+          <div class="accordion__item__content">
+            <p>Kami bekerja dengan sejumlah ahli kreatif yang berpengalaman dan berbakat, siap untuk membawa ide-ide Anda
+              menjadi kenyataan. Dari desain web hingga konten video yang menakjubkan, tim kami memiliki keahlian di
+              berbagai bidang.</p>
+          </div>
         </div>
-		
-		<div class="product" onclick="goToProductPage('product-page4.html')">
-            <img src="https://i.ytimg.com/vi/InARO5pEugs/maxresdefault.jpg" alt="Product 4">
-            <div class="product-name">Video Iklan Produk</div>
-            <div class="product-price">Rp. 400.000</div>
-			<div class="terjual"> <i class="fas fa-star star-icon"></i>&nbsp;5.0 | 3 terjual</div>
+    
+    
+        <div class="accordion__item">
+          <div class="accordion__item__header">
+            Portofolio
+          </div>
+    
+          <div class="accordion__item__content">
+            <p>Lihatlah portofolio kami yang kaya akan proyek-proyek yang telah sukses diselesaikan. Ini adalah bukti
+              kompetensi kami dalam memberikan solusi kreatif yang unik dan sesuai dengan kebutuhan Anda.</p>
+          </div>
         </div>
-		
-		<div class="product" onclick="goToProductPage('product-page4.html')">
-            <img src="https://img.ws.mms.shopee.co.id/cb1eb498ed9faaa2f1c8dc582256ff00" alt="Product 4">
-            <div class="product-name">Desain CV</div>
-            <div class="product-price">Rp. 25.000</div>
-			<div class="terjual"> <i class="fas fa-star star-icon"></i>&nbsp;5.0 | 3 terjual</div>
+    
+        <div class="accordion__item">
+          <div class="accordion__item__header">
+            Free Konsultasi
+          </div>
+    
+          <div class="accordion__item__content">
+            <p>Kami memahami bahwa proyek kreatif memerlukan kolaborasi yang efektif. Dengan platform kami, Anda dapat
+              berkomunikasi secara langsung dengan para profesional kreatif kami untuk memastikan setiap detail sesuai
+              dengan visi Anda.</p>
+          </div>
         </div>
-		
-		<div class="product" onclick="goToProductPage('product-page4.html')">
-            <img src="https://ngundangkuy.com/wp-content/uploads/2022/03/mock-up-hp-min.png" alt="Product 4">
-            <div class="product-name">Undangan Digital</div>
-            <div class="product-price">Rp. 25.000</div>
-			<div class="terjual"> <i class="fas fa-star star-icon"></i>&nbsp;5.0 | 3 terjual</div>
+    
+        <div class="accordion__item">
+          <div class="accordion__item__header">
+            Pilihan Layanan
+          </div>
+    
+          <div class="accordion__item__content">
+            <p>Dari pembuatan landing page yang menarik hingga video iklan produk yang Ciamik, kami menawarkan beragam
+              layanan kreatif yang dapat disesuaikan dengan kebutuhan Anda. Tidak ada proyek terlalu kecil atau terlalu
+              besar untuk kami tangani.</p>
+          </div>
         </div>
-			<!-- Tempat produk akan ditampilkan -->
-		</div>
-	</div>
-	
-	
-	<div class="content" id="videoContent">
-        <div id="portfolio-section">
-            <div class="thumbnail" onclick="openVideoModal('l1h7rRApoo0')">
-      <div class="play-icon"><i class="fas fa-play"></i></div>
-      <img src="https://i.pinimg.com/736x/71/ff/6f/71ff6f9cf80817eab0cc0cd233b3b8bf.jpg" alt="Thumbnail 1">
-      <div class="views"><i class="fas fa-play"></i>&nbsp;87.9K</div>
+    
+        <div class="accordion__item">
+          <div class="accordion__item__header">
+            Kepuasan Pelanggan
+          </div>
+    
+          <div class="accordion__item__content">
+            <p>Ratusan pelanggan puas telah mengandalkan JalurCreative untuk kebutuhan kreatif mereka. Ulasan positif
+              mereka adalah bukti komitmen kami terhadap kualitas dan kepuasan pelanggan.</p>
+          </div>
+        </div>
+    
+      </div> <!-- id accordion end -->
+    
     </div>
-    <div class="thumbnail" onclick="openVideoModal('B2BZ_MiY-Q0')">
-      <div class="play-icon"><i class="fas fa-play"></i></div>
-      <img src="https://e1.pxfuel.com/desktop-wallpaper/970/45/desktop-wallpaper-cool-for-whatsapp-profile-unique-dp.jpg" alt="Thumbnail 2">
-      <div class="views"><i class="fas fa-play"></i>&nbsp;104.2K</div>
-    </div>
-    <div class="thumbnail" onclick="openVideoModal('wpV9Te98keQ')">
-      <div class="play-icon"><i class="fas fa-play"></i></div>
-      <img src="https://cms.dailysocial.id/wp-content/uploads/2022/10/fp3.jpg" alt="Thumbnail 3">
-      <div class="views"><i class="fas fa-play"></i>&nbsp;99.7K</div>
-    </div>
-    <div class="thumbnail" onclick="openVideoModal('WhPI56rvSpY')">
-      <div class="play-icon"><i class="fas fa-play"></i></div>
-      <img src="https://berita.99.co/wp-content/uploads/2022/06/memakai-topi.jpg" alt="Thumbnail 4">
-      <div class="views"><i class="fas fa-play"></i>&nbsp;144.1K</div>
-    </div>
-    <div class="thumbnail" onclick="openVideoModal('ku7UbqzHRNk')">
-      <div class="play-icon"><i class="fas fa-play"></i></div>
-      <img src="https://cdn.idntimes.com/content-images/post/20221104/peace-c2ca66a9561d3e09645a357962adfe0a.jpeg" alt="Thumbnail 5">
-      <div class="views"><i class="fas fa-play"></i>&nbsp;154.3K</div>
-    </div>
-    <div class="thumbnail" onclick="openVideoModal('5-ZgHJ4ssOY')">
-      <div class="play-icon"><i class="fas fa-play"></i></div>
-      <img src="https://hotelier.id/wp-content/uploads/2023/03/kartun-5.jpg" alt="Thumbnail 6">
-      <div class="views"><i class="fas fa-play"></i>&nbsp;201.4K</div>
+
+
+    <div class="gambaride scroll-animation">
+      <img src="asset/idebagus.jpg" alt="pemikiran" class="visible" />
+  </div>
+  
+
+  </div>
+</div>
+
+  
+
+
+  <!------------------------------------------------------------------------------------->
+
+  <div class="filter-menu">
+    <img src="asset/jasa layanan.png" onclick="showProducts()" id="productsIcon"></i>
+    <span onclick="showProducts()">Jasa Layanan</span>
+
+    <img src="asset/portofolio.png" onclick="showGallery()" id="galleryIcon"></i>
+    <span onclick="showGallery()">Portofolio</span>
+  </div>
+
+  <!--------------------------------------produk----------------------------------------------->
+
+  <div class="content" id="productContent">
+
+    <div id="produk-section">
+
+      <div class="product scroll-animation" onclick="goToProductPage('product-page1.html')">
+        <img src="https://toffeedev.com/wp-content/uploads/2021/08/cara-membuat-landing-page.png" alt="Product 1">
+        <div class="product-name">Pembuatan Landing Page</div>
+        <div class="terjual">Rating | <i class="fas fa-star star-icon"></i>&nbsp;5.0</div>
+        <div class="text-container">
+          <div class="mulai">Mulai</div>
+          <div class="harga">Rp. 500.000</div>
+        </div>
+      </div>
+
+      <div class="product scroll-animation onclick="goToProductPage('product-page2.html')">
+        <img
+          src="https://images.ctfassets.net/00i767ygo3tc/3GZS2UPQlrfnQmeMp78MSi/541c3a8854d6883b5fe8b8128edddcde/2022-1_SEO-Blog-Post-Images_Q1_11-15_how-to-make-a-youtube-intro.png"
+          alt="Product 2">
+        <div class="product-name">Video Intro Youtube</div>
+        <div class="terjual">Rating | <i class="fas fa-star star-icon"></i>&nbsp;4.9</div>
+        <div class="text-container">
+          <div class="mulai">Mulai</div>
+          <div class="harga">Rp. 50.000</div>
+        </div>
+      </div>
+
+      <div class="product scroll-animation" onclick="goToProductPage('product-page3.html')">
+        <img
+          src="https://p16-capcut-va.ibyteimg.com/tos-maliva-i-6rr7idwo9f-us/997ec5c5831344ccb142a1b742ffcb75~tplv-6rr7idwo9f-image.image"
+          alt="Product 3">
+        <div class="product-name">Konten Video Produk Promosi</div>
+        <div class="terjual">Rating | <i class="fas fa-star star-icon"></i>&nbsp;5.0</div>
+        <div class="text-container">
+          <div class="mulai">Mulai</div>
+          <div class="harga">Rp. 100.000</div>
+        </div>
+      </div>
+
+      <div class="product scroll-animation" onclick="goToProductPage('product-page4.html')">
+        <img src="https://s1.bukalapak.com/bukalapak-kontenz-production/content_attachments/79246/w-960/1631257719.jpeg"
+          alt="Product 4">
+        <div class="product-name">Foto Produk</div>
+        <div class="terjual">Rating | <i class="fas fa-star star-icon"></i>&nbsp;5.0</div>
+        <div class="text-container">
+          <div class="mulai">Mulai</div>
+          <div class="harga">Rp. 50.000</div>
+        </div>
+      </div>
+
+      <div class="product scroll-animation" onclick="goToProductPage('product-page4.html')">
+        <img src="https://i.ytimg.com/vi/InARO5pEugs/maxresdefault.jpg" alt="Product 4">
+        <div class="product-name">Video Iklan Produk</div>
+        <div class="terjual">Rating | <i class="fas fa-star star-icon"></i>&nbsp;5.0</div>
+        <div class="text-container">
+          <div class="mulai">Mulai</div>
+          <div class="harga">Rp. 200.000</div>
+        </div>
+      </div>
+
+      <div class="product scroll-animation" onclick="goToProductPage('product-page4.html')">
+        <img src="https://img.ws.mms.shopee.co.id/cb1eb498ed9faaa2f1c8dc582256ff00" alt="Product 4">
+        <div class="product-name">Desain CV</div>
+        <div class="terjual">Rating | <i class="fas fa-star star-icon"></i>&nbsp;5.0</div>
+        <div class="text-container">
+          <div class="mulai">Mulai</div>
+          <div class="harga">Rp. 25.000</div>
+        </div>
+      </div>
+
+      <div class="product scroll-animation" onclick="goToProductPage('product-page4.html')">
+        <img src="https://ngundangkuy.com/wp-content/uploads/2022/03/mock-up-hp-min.png" alt="Product 4">
+        <div class="product-name">Undangan Digital</div>
+        <div class="terjual">Rating | <i class="fas fa-star star-icon"></i>&nbsp;5.0</div>
+        <div class="text-container">
+          <div class="mulai">Mulai</div>
+          <div class="harga">Rp. 49.000</div>
+        </div>
+      </div>
+      <!-- Tempat produk akan ditampilkan -->
     </div>
   </div>
 
-  <div id="video-modal">
-    <div id="video-container">
-      <span id="close-icon" onclick="closeVideoModal()">&#10006;</span>
-      <iframe id="video" frameborder="0" allowfullscreen></iframe>
-      <div id="play-icon-modal" class="play-icon"><i class="fas fa-play"></i></div>
-    </div>
+  <!------------------------------------------video konten--------------------------------->
+
+  <div class="content" id="videoContent">
+    <div id="portfolio-section">
+      
+
+
+
+
+
+  <div class="content" id="galleryContent">
+    <!-- Image gallery goes here -->
   </div>
+</main>
+
+  <footer class="footer">
+    <div class="columns">
+      <div class="column-menu">
+        <h3>JalurCreative</h3>
+        <ul>
+          <li>Home</li>
+          <li>Layanan Kami</li>
+          <li>Testimoni</li>
+          <li>Kontak Kami</li>
+        </ul>
+      </div>
+
+      <div class="column-location">
+        <h3>Lokasi</h3>
+        <p>Permata Wanasari Blok H4, Cibitung - Bekasi, Jawa Barat</p>
+        <p>+62 857 1778 8015</p>
+      </div>
+
+      <div class="column-service">
+        <h3>Services</h3>
+        <ul>
+          <li>Sosial Media Management</li>
+          <li>Landingpage Desain & Related Konten</li>
+          <li>Marketplace Desain & Related Konten</li>
+          <li>Video Production</li>
+        </ul>
+      </div>
+
+      <div class="column-metode">
+        <h3>Metode Pembayaran</h3>
+        <div class="image-container">
+          <img src="https://www.zeinproduction.com/images/bca.png" alt="Gambar 1">
+          <img src="https://www.zeinproduction.com/images/ovo.png" alt="Gambar 2">
+          <img src="https://www.zeinproduction.com/images/ovo.png" alt="Gambar 3">
+          <img src="https://www.zeinproduction.com/images/dana.png" alt="Gambar 4">
         </div>
-
-        <div id="video-modal">
-            <div id="video-container">
-                <span id="close-icon" onclick="closeVideoModal">&#10006;</span>
-                <iframe id="video" frameborder="0" allowfullscreen></iframe>
-                <div id="play-icon-modal" class="play-icon"><i class="fas fa-play"></i></div>
-            </div>
-        </div>
+      </div>
     </div>
-	
-	
-	
-	 <div class="content" id="galleryContent">
-        <!-- Image gallery goes here -->
-    </div>
-	
-	 <footer class="footer">
-	<div class="columns">
-		<div class="column-menu">
-		  <h3>JalurKreatif</h3>
-		  <ul>
-			<li>Home</li>
-			<li>Layanan Kami</li>
-			<li>Testimoni</li>
-			<li>Kontak Kami</li>
-		  </ul>
-		</div>
-
-		<div class="column-location">
-		  <h3>Locationg</h3>
-		  <p>Permata Wanasari Blok H4, Cibitung - Bekasi, Jawa Barat</p>
-		  <p>+62 857 1778 8015</p>
-		</div>
-
-		<div class="column-service">
-		  <h3>Services</h3>
-		  <ul>
-			<li>Sosial Media Management</li>
-			<li>Landingpage Desain & Related Konten</li>
-			<li>Marketplace Desain & Related Konten</li>
-			<li>Video Production</li>
-		  </ul>
-		</div>
-
-		<div class="column-metode">
-		  <h3>Metode Pembayaran</h3>
-		  <div class="image-container">
-			<img src="https://www.zeinproduction.com/images/bca.png" alt="Gambar 1">
-			<img src="https://www.zeinproduction.com/images/ovo.png" alt="Gambar 2">
-			<img src="https://www.zeinproduction.com/images/ovo.png" alt="Gambar 3">
-			<img src="https://www.zeinproduction.com/images/dana.png" alt="Gambar 4">
-		  </div>
-		</div>
-	</div>
   </footer>
- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            showProducts();
-        });
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> <!--accordion-->
+  <script src="js/accordion.js"></script>
 
-        function showVideos() {
-            document.getElementById('videoContent').style.display = 'block';
-            document.getElementById('productContent').style.display = 'none';
-            document.getElementById('galleryContent').style.display = 'none';
+    
+  <script>
 
-            document.getElementById('videosIcon').classList.add('active');
-            document.getElementById('productsIcon').classList.remove('active');
-            document.getElementById('galleryIcon').classList.remove('active');
-        }
+    document.addEventListener('DOMContentLoaded', function () {
+      showProducts();
+    });
 
-        function showProducts() {
-            document.getElementById('videoContent').style.display = 'none';
-            document.getElementById('productContent').style.display = 'block';
-            document.getElementById('galleryContent').style.display = 'none';
+    function showProducts() {
+      document.getElementById('productContent').style.display = 'block';
+      document.getElementById('galleryContent').style.display = 'none';
 
-            document.getElementById('videosIcon').classList.remove('active');
-            document.getElementById('productsIcon').classList.add('active');
-            document.getElementById('galleryIcon').classList.remove('active');
-        }
+      document.getElementById('productsIcon').classList.add('active');
+      document.getElementById('galleryIcon').classList.remove('active');
+    }
 
-        function showGallery() {
-            document.getElementById('videoContent').style.display = 'none';
-            document.getElementById('productContent').style.display = 'none';
-            document.getElementById('galleryContent').style.display = 'block';
+    function showGallery() {
+      document.getElementById('productContent').style.display = 'none';
+      document.getElementById('galleryContent').style.display = 'block';
 
-            document.getElementById('videosIcon').classList.remove('active');
-            document.getElementById('productsIcon').classList.remove('active');
-            document.getElementById('galleryIcon').classList.add('active');
-        }
+      document.getElementById('productsIcon').classList.remove('active');
+      document.getElementById('galleryIcon').classList.add('active');
+    }
 
-        function openVideoModal(videoId) {
-            const videoModal = document.getElementById('video-modal');
-            const videoFrame = document.getElementById('video');
-            const playIconModal = document.getElementById('play-icon-modal');
 
-            videoFrame.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
-            videoModal.style.display = 'flex';
-            videoFrame.style.animation = 'zoomIn 0.5s';
+    // ------------------------------------------------------------------------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', function () {
+      // Menambahkan event listener untuk setiap produk
+      var products = document.querySelectorAll('.product');
 
-            playIconModal.style.display = 'none';
-        }
-
-        function closeVideoModal() {
-            const videoModal = document.getElementById('video-modal');
-            const videoFrame = document.getElementById('video');
-            const playIconModal = document.getElementById('play-icon-modal');
-
-            videoFrame.src = '';
-            videoModal.style.display = 'none';
-
-            playIconModal.style.display = 'block';
-        }
-// ------------------------------------------------------------------------------------------------------------------------------
-		document.addEventListener('DOMContentLoaded', function () {
-    // Menambahkan event listener untuk setiap produk
-    var products = document.querySelectorAll('.product');
-
-    products.forEach(function (product, index) {
+      products.forEach(function (product, index) {
         var productPageUrl = 'product-page' + (index + 1) + '.html';
 
         product.addEventListener('click', function () {
-            goToProductPage(productPageUrl, this);
+          goToProductPage(productPageUrl, this);
         });
+      });
     });
-});
 
-function goToProductPage(url, clickedProduct) {
-    // Tambahkan class untuk animasi zoom-out
-    clickedProduct.classList.add('zoom-out');
+    function goToProductPage(url, clickedProduct) {
+      // Tambahkan class untuk animasi zoom-out
+      clickedProduct.classList.add('zoom-out');
 
-    // Pindah halaman setelah selesai animasi zoom-out
-    setTimeout(function () {
+      // Pindah halaman setelah selesai animasi zoom-out
+      setTimeout(function () {
         window.location.href = url;
-    }, 300);
-}
-
-
-// ------------------------------------------------------------------------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-    // Panggil fungsi untuk menampilkan produk dari penyimpanan
-    tampilkanProdukDariPenyimpanan();
-});
-
-function tampilkanProdukDariPenyimpanan() {
-    // Ambil produk dari penyimpanan (contoh: localStorage)
-    var produkList = JSON.parse(localStorage.getItem('produkList')) || [];
-
-    // Tampilkan setiap produk
-    for (var i = 0; i < produkList.length; i++) {
-        var produk = produkList[i];
-
-        // Tampilkan produk di halaman toko pengguna
-        var produkSection = document.getElementById('produk-section');
-
-        var produkCard = document.createElement('div');
-        produkCard.innerHTML = `
-            <div class="product" onclick="openProductPage('${produk.url}')">
-                <img src="${produk.gambar}" alt="${produk.nama}">
-                <div class="product-name">${produk.nama}</div>
-                <div class="product-price">Rp. ${produk.harga}</div>
-                <div class="terjual"> <i class="fas fa-star star-icon"></i>&nbsp;${produk.rating} | ${produk.terjual} terjual</div>
-            </div>
-        `;
-
-        produkSection.appendChild(produkCard);
+      }, 300);
     }
+
+
+    // ------------------------------------------------------------------------------------------------------------------------------
+   
+  </script>
+
+  <script> // transisi masuk ketika pengguna menggulir layar
+    // Fungsi untuk mengecek apakah elemen ada di dalam jendela saat digulir
+    function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
 }
 
-function openProductPage(url) {
-    window.open(url, '_blank');
+function animateOnScroll() {
+    var elements = document.querySelectorAll('.scroll-animation');
+    elements.forEach(function(element) {
+        if (isElementInViewport(element)) {
+            element.classList.add('visible');
+        }
+    });
 }
-</script>
-	
-<script>
-function myFunction(x) {
-  x.classList.toggle("change");
-}
-</script>
+
+document.addEventListener('DOMContentLoaded', animateOnScroll);
+document.addEventListener('scroll', animateOnScroll);
+  </script>
 
 </body>
+
 </html>
