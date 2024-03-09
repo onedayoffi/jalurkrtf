@@ -11,12 +11,26 @@ body {
 
 
 .footer {
-	background-image: linear-gradient(to right, #0e2b4d, #2c5583);
+  background: linear-gradient(-45deg, #96760c, #fcd989, #a06e1e, #d4a41f, #eec485);
   color: #fff;
-  padding: 0px;
-  margin-top: 0;
-
+  padding: 20px;
+	background-size: 200% 100%; /* Panjang awal gradient */
+    animation: gradientShift 5s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Animasi background gradient dengan cubic-bezier */
 }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%; /* Posisi awal background */
+    }
+    50% {
+        background-position: 100% 50%; /* Posisi tengah */
+    }
+    100% {
+        background-position: 0% 50%; /* Posisi akhir background */
+    }
+}
+
 	.columns {
 		  display: grid;
 		  justify-content: space-between;
@@ -27,7 +41,7 @@ body {
 		  padding: 20px;
 		  gap: 1px;
 		  max-width: 1000px;
-		  margin: auto; /* Menambahkan margin atas dan bawah, dan mengatur margin kanan dan kiri */
+		  margin: 20px auto; /* Menambahkan margin atas dan bawah, dan mengatur margin kanan dan kiri */
 	}
 
 		.column-menu {
@@ -71,9 +85,10 @@ body {
 
 @media screen and (max-width: 768px) {
 	.footer {
-		background-image: linear-gradient(to right, #0e2b4d, #2c5583);
+  background: linear-gradient(to bottom, #34315c, #31375c);
   color: #fff;
   padding: 20px;
+  margin-top: 9em;
 
 }
 	.columns {
@@ -99,13 +114,7 @@ body {
 		.column-location {
 		  text-align: left;
 		  max-width: 600px;
-		  font-size: 15px;
 		}
-		.column-location p {
-			text-align: left;
-			max-width: 600px;
-			font-size: 12px;
-		  }
 		.column-service {
 		  text-align: left;
 		  max-width: 600px;
