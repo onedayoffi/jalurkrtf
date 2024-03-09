@@ -11,10 +11,10 @@ body {
 
 
 .footer {
-  background: linear-gradient(-10deg, #34315c, #31375c);
+  background: linear-gradient(-45deg, #96760c, #fcd989, #a06e1e, #d4a41f, #eec485);
   color: #fff;
   padding: 20px;
-	background-size: 500% 100%; /* Panjang awal gradient */
+	background-size: 200% 100%; /* Panjang awal gradient */
     animation: gradientShift 5s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Animasi background gradient dengan cubic-bezier */
 }
 }
