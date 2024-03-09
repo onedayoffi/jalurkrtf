@@ -14,8 +14,21 @@ body {
   background: linear-gradient(to bottom, #34315c, #31375c);
   color: #fff;
   padding: 20px;
-
+    animation: slide 10s linear infinite;
 }
+
+@keyframes slide {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+	}
+
 	.columns {
 		  display: grid;
 		  justify-content: space-between;
