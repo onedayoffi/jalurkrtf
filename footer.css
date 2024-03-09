@@ -11,18 +11,23 @@ body {
 
 
 .footer {
-  background: linear-gradient(to bottom, #34315c, #31375c);
+  background: linear-gradient(-10deg, #34315c, #31375c);
   color: #fff;
   padding: 20px;
-    animation: slide 10s linear infinite;
+	background-size: 500% 100%; /* Panjang awal gradient */
+    animation: gradientShift 5s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Animasi background gradient dengan cubic-bezier */
+}
 }
 
-@keyframes slide {
+@keyframes gradientShift {
     0% {
-        left: -100%;
+        background-position: 0% 50%; /* Posisi awal background */
+    }
+    50% {
+        background-position: 100% 50%; /* Posisi tengah */
     }
     100% {
-        left: 100%;
+        background-position: 0% 50%; /* Posisi akhir background */
     }
 }
 
