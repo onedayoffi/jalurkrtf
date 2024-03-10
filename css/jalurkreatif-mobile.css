@@ -522,7 +522,7 @@
     /* ---------------------------------------------------- */
 
     #productContent {
-        background-image: url('asset/background-newspaper2.jpg');
+        background-image: url('css/asset/background-newspaper2.jpg');
         width: 100%;
         min-height: 100vh;
         display: flex;
