@@ -353,10 +353,11 @@
         background-color: ;
         color: #272b3b;
         font-family: 'DM Sans', 'montserrat', san-serif;
-        padding-left: 1em;
+        padding-left: 0em;
     }
 
-    .platform {
+   h3.platform {
+    font-family: 'DM Sans', 'montserrat', san-serif;
         font-size: 2em;
         line-height: 1em;
         margin-bottom: 0.8em;
@@ -378,8 +379,9 @@
         }
     }
 
-    .siapa {
+    h3.siapa {
         font-size: 3em;
+        font-family: 'DM Sans', 'montserrat', san-serif;
         line-height: 1em;
         margin-bottom: 0.8em;
         color: #f8be0e;
@@ -400,7 +402,7 @@
         }
     }
 
-    .membantu {
+    h3.membantu {
         font-size: 1.5em;
         line-height: 1em;
         color: #041b30;
