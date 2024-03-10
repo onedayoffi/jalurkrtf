@@ -87,7 +87,7 @@ body {
   background: linear-gradient(-10deg, #34315c, #31375c, #34315c, #31375c, #34315c);
   color: #fff;
   padding: 20px;
-  margin-top: 9em;
+  margin-top: 0px;
 		background-size: 300% 100%; /* Panjang awal gradient */
     animation: gradientShift 10s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Animasi background gradient dengan cubic-bezier */
 	}
