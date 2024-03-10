@@ -325,7 +325,7 @@
     }
 
 
-    .platform {
+    h3.platform {
         font-family: 'DM sans', sans-serif;
         font-size: 1.7em;
         line-height: 1em;
@@ -337,7 +337,7 @@
         animation: slideIn 1s ease-out;
     }
     
-    .platform.visible {
+    h3.platform.visible {
         opacity: 1; /* Ubah opasitas menjadi 1 saat elemen terlihat */
         transform: translateX(0); /* Kembalikan elemen ke posisi semula */
     }
@@ -356,7 +356,7 @@
         }
     }
 
-    .siapa {
+    h3.siapa {
         font-size: 1.4em;
         line-height: 1em;
         margin-bottom: 0.8em;
@@ -367,7 +367,7 @@
         animation: slideInFromTop 1s ease-out; /* Terapkan animasi */
     }
     
-    .siapa.visible {
+    h3.siapa.visible {
         opacity: 1; /* Ubah opacity menjadi 1 agar terlihat */
         transform: translateX(0); /* Ubah translasi menjadi 0 untuk mengembalikan ke posisi semula */
     }
@@ -385,7 +385,7 @@
         }
     }
 
-    .membantu {
+    h3.membantu {
         font-size: 0.9em;
         font-weight: 400;
         line-height: 1em;
@@ -522,7 +522,13 @@
     /* ---------------------------------------------------- */
 
     #productContent {
-        background-image: url('asset/bubble.png');
+        background-image: url('asset/background-newspaper2.jpg');
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
         height: auto;
         background-size: cover;
         background-position: center;
