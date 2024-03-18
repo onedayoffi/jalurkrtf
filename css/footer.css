@@ -126,7 +126,11 @@ body {
 		.column-location {
 		  text-align: left;
 		  max-width: 600px;
-		}
+		}		
+
+	.column-location p {
+		font-size: 15px;
+	}
 		.column-service {
 		  text-align: left;
 		  max-width: 600px;
